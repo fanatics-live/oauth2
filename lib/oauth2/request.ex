@@ -24,7 +24,7 @@ defmodule OAuth2.Request do
     params = opts[:params] || %{}
 
     if Application.get_env(:oauth2, :debug) do
-      Logger.debug("""
+      Logger.info("""
         OAuth2 Provider Request
         url: #{inspect(url)}
         method: #{inspect(method)}

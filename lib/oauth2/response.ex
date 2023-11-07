@@ -36,7 +36,7 @@ defmodule OAuth2.Response do
     resp = %__MODULE__{status_code: code, headers: headers, body: body}
 
     if Application.get_env(:oauth2, :debug) do
-      Logger.debug("OAuth2 Provider Response #{inspect(resp)}")
+      Logger.info("OAuth2 Provider Response #{inspect(resp)}")
     end
 
     resp
